@@ -1,0 +1,139 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  50% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInLeftSlow {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    opacity: 0;
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/* set base font-size at 62.5% off of the default browser font-size of 16px -> sets font-size as 10px and allows rem to be used  */
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777; }
+
+.heading-primary {
+  color: #eee;
+  text-transform: uppercase; }
+  .heading-primary--main {
+    display: block;
+    font-size: 8rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    animation: moveInLeft 1s ease-in-out;
+    text-align: right; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 3rem;
+    font-weight: 400;
+    animation: moveInLeftSlow 2s ease-in-out; }
+
+.heading-secondary {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #6a8dee, #2a52be);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px; }
+  .heading-secondary--animated {
+    animation: moveInLeft 2s ease-in-out; }
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 2rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-sm {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-md {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-lg {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-lg {
+  margin-top: 8rem !important; }
+
+.u-margin-top-xl {
+  margin-top: 10rem !important; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - 3 * 6rem) / 4) + (2 * 6rem)); }
+
+.header {
+  height: 90vh;
+  background-image: linear-gradient(to right, rgba(106, 141, 238, 0.7), rgba(22, 45, 109, 0.7)), url(../img/guitar-header.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 10rem 0; }

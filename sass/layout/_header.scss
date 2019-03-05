@@ -1,0 +1,11 @@
+.header {
+  height: 90vh;
+  background-image: linear-gradient(to right, rgba($primary-color-light, .7), rgba($primary-color-dark, .7)), url(../img/guitar-header.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &__text-box {
+    @include centered;
+  }
+}
