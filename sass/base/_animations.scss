@@ -30,3 +30,13 @@
     transform: translate(0);
   }
 }
+
+@keyframes widen {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 75%;
+  }
+}

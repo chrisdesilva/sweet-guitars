@@ -1,0 +1,36 @@
+.composition {
+  position: relative;
+
+  &__photo {
+    height: 30vh;
+    position: absolute;
+    border-radius: 3px;
+    z-index: 10;
+    box-shadow: 0 1rem 1.5rem rgba($black, .8);
+    transition: all 300ms ease-out;
+
+    &--p1 {
+      left: 0;
+      top: -2rem;
+    }
+
+    &--p2 {
+      right: 12rem;
+      top: 2rem;
+    }
+
+    &--p3 {
+      left: 20%;
+      top: 10rem;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      z-index: 20;
+    }
+  }
+// select all photos not being hovered and shrink
+  &:hover &__photo:not(:hover) {
+    transform: scale(.95);
+  }
+}
