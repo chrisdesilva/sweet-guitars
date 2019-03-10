@@ -1,17 +1,18 @@
 .card {
-  perspective: 150rem;
-  -moz-perspective: 150rem;
   position: relative;
-  height: 52rem;
+  height: auto;
+  transition: all 300ms;
+
+  &:hover {
+    transform: scale(1.1); 
+  }
 
   &__side {
-    height: 52rem;
-    transition: all 600ms ease;
-    position: absolute;
+    height: auto;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($black, .15);
@@ -19,18 +20,6 @@
     &--front {
       background-color: $white;
     }
-
-    &--back {
-      transform: rotateY(180deg);
-    } 
-  }
-
-  &:hover &__side--front {
-    transform: rotateY(-180deg);
-  }
-
-  &:hover &__side--back {
-    transform: rotateY(0);
   }
 
   &__picture {
@@ -38,12 +27,40 @@
     height: 23rem;
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 
     &--1 {
       background-image: linear-gradient(to right, $primary-color-light, $primary-color-dark), url(../img/gibson-lp.jpg);
     }
+
+    &--2 { 
+      background-image: linear-gradient(to right, $secondary-color-light, $secondary-color-dark), url(../img/gibson-lp.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(to right, $tertiary-color-light, $tertiary-color-dark), url(../img/gibson-lp.jpg);
+    }
   }
-}
+
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $light-gray-2;
+        }
+      }
+    }
+  }
+} 
