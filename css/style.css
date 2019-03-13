@@ -181,6 +181,8 @@ body {
       background-image: linear-gradient(to right, #71e480, #0f661b), url(../img/gibson-lp.jpg); }
     .card__picture--3 {
       background-image: linear-gradient(to right, #e49292, #580f0f), url(../img/gibson-lp.jpg); }
+  .card__cta {
+    text-align: center; }
   .card__details {
     padding: 3rem; }
     .card__details ul {
